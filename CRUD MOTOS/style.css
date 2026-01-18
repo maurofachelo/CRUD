@@ -1,0 +1,204 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e60000, #000000);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid #e60000;
+}
+
+/* Contenedor de inputs */
+form > input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+form > input:focus {
+    outline: none;
+    border-color: #e60000;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(230, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+form > input::placeholder {
+    color: #888;
+}
+
+/* Contenedor de botones */
+form > br + br {
+    display: none;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botón Agregar */
+button[formaction="create.php"] {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+}
+
+/* Botón Consultar */
+button[formaction="read.php"] {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+}
+
+/* Botón Actualizar */
+button[formaction="update.php"] {
+    background: linear-gradient(45deg, #ffc107, #fd7e14);
+    color: white;
+}
+
+/* Botón Borrar */
+button[formaction="delete.php"] {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    color: white;
+}
+
+/* Botón Limpiar */
+button[type="reset"] {
+    background: linear-gradient(45deg, #6c757d, #495057);
+    color: white;
+}
+
+/* Efectos hover para botones */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Efectos específicos para cada botón */
+button[formaction="create.php"]:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+}
+
+button[formaction="read.php"]:hover {
+    background: linear-gradient(45deg, #0056b3, #004085);
+}
+
+button[formaction="update.php"]:hover {
+    background: linear-gradient(45deg, #e0a800, #e05a00);
+}
+
+button[formaction="delete.php"]:hover {
+    background: linear-gradient(45deg, #c82333, #a71e2a);
+}
+
+button[type="reset"]:hover {
+    background: linear-gradient(45deg, #545b62, #3d4348);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    form {
+        padding: 15px;
+    }
+    
+    form > input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Animación de entrada */
+form {
+    animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los labels (si decides agregarlos después) */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e60000;
+}

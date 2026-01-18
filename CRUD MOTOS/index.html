@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CRUD Motos</title>
+  </head>
+  <body>
+    <h1>CRUD MOTOS</h1>
+    <form method="POST" action="">
+      <input
+        type="number"
+        name="id_moto"
+        placeholder="ID (para actualizar/borrar)"
+      />
+      <input type="text" name="modelo" placeholder="Modelo" />
+      <input type="text" name="cilindrada" placeholder="Cilindrada" />
+      <input type="number" name="precio" placeholder="Precio" />
+      <input type="text" name="ABS" placeholder="ABS (0/1)" />
+
+      <br /><br />
+
+      <button type="submit" formaction="create.php">Agregar</button>
+      <button type="submit" formaction="read.php">Consultar</button>
+      <button type="submit" formaction="update.php">Actualizar</button>
+      <button type="submit" formaction="delete.php">Borrar</button>
+      <button type="reset">Limpiar</button>
+    </form>
+  </body>
+</html>
